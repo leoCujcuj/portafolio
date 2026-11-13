@@ -14,7 +14,7 @@ export const portfolioData = {
     whatsapp: "https://wa.me/50233381140",
     location: "Guatemala",
     profileImage: "/foto.jpeg",
-    github: "https://github.com/ecujcuj-2024028",
+    github: "https://github.com/leoCujcuj",
     linkedin: "https://www.linkedin.com/in/edvin-leonel-cujcuj-ejcalón-42852241a/",
     cv: "/CV.pdf",
     computrabajo: "https://computrabajo.com",
@@ -28,6 +28,7 @@ export const portfolioData = {
         title: "Frontend Core",
         items: [
           { name: "React.js", level: "Medio", progress: 80 },
+          { name: "TypeScript", level: "Medio", progress: 85 },
           { name: "JavaScript / ES6+", level: "Medio", progress: 80 },
           { name: "HTML5", level: "Alto", progress: 85 },
           { name: "CSS3", level: "Medio", progress: 80 },
@@ -39,7 +40,9 @@ export const portfolioData = {
         title: "Backend & Bases de Datos",
         items: [
           { name: "Node.js / Express", level: "Medio", progress: 85 },
-          { name: "SQL (MySQL/PostgreSQL)", level: "Medio", progress: 70 },
+          { name: "NestJS", level: "Medio", progress: 80 },
+          { name: "Prisma ORM", level: "Medio", progress: 80 },
+          { name: "SQL (MySQL/PostgreSQL)", level: "Medio", progress: 75 },
           { name: "MongoDB", level: "Medio", progress: 70 },
           { name: "Java / Spring Boot", level: "Medio", progress: 50 },
           { name: "C# / .Net", level: "Medio", progress: 65 },
@@ -51,6 +54,7 @@ export const portfolioData = {
         title: "Herramientas",
         items: [
           { name: "Git & GitHub", level: "Alto", progress: 85 },
+          { name: "Playwright / Jest", level: "Medio", progress: 75 },
           { name: "Figma (UI/UX Design)", level: "Medio", progress: 65 },
           { name: "Vite", level: "Alto", progress: 80 },
           { name: "Redux", level: "Medio", progress: 65 },
@@ -66,7 +70,7 @@ export const portfolioData = {
       {
         title: "Perito en Computación",
         institution: "Centro Educativo Kinal",
-        period: "2024 - Presente",
+        period: "2024 - 2026",
         description: "Enfoque en programación orientada a objetos, bases de datos, estructuras de datos y metodologías ágiles de desarrollo de software."
       },
       {
@@ -92,14 +96,30 @@ export const portfolioData = {
         period: "Octubre 2025 - Noviembre 2025",
         description: "Desarrollo de Software Frontend y Backend Jr, integracion de APIs RESTful"
       },{
-        title: "Desarrollador jr (Prácticas Profesionales)",
+        title: "Desarrollador Full Stack Jr (Prácticas Profesionales)",
         company: "Great Place to Develop",
         period: "Agosto 2026 - Octubre 2026",
-        description: "Desarrollo de Software Frontend y Backend Jr, integracion de APIs RESTful"
+        description: "Desarrollo de GPD Pagos, plataforma empresarial (B2B/FinTech) en arquitectura monorepo modular. Backend con NestJS, Prisma ORM y PostgreSQL. Frontend con React, TypeScript y TanStack Query. Integración de IA (Claude) bajo gobernanza determinista, reportes con Puppeteer-Core/ExcelJS y pruebas automatizadas con Jest y Playwright."
       },
     ]
   },
   projects: [
+    {
+      id: "gpd-pagos",
+      title: "GPD Pagos — Plataforma Empresarial & IA",
+      description: "Plataforma empresarial (B2B / FinTech interna) para el cálculo de nóminas multilaborales, proyecciones financieras y cotización determinística de proyectos de software en consultoría técnica. Integra modelos de lenguaje (Anthropic Claude) bajo estrictas políticas de gobernanza donde la IA asiste en redacción e interpretación cualitativa con acceso vetado a cifras reales, delegando el cálculo numérico a motores matemáticos puros e inmutables. Arquitectura monorepo modular desacoplada en Core Contractual, API Backend y Single Page Application.",
+      skillsLearned: ["TypeScript (Strict)", "NestJS", "Prisma ORM", "PostgreSQL", "React", "TanStack Query", "Anthropic Claude", "Puppeteer-Core", "Playwright & Jest", "Docker & Azure"],
+      repoUrl: "",
+      demoUrl: "",
+      displayed: false,
+      images: {
+        ui1: "/projects/gpd-pagos/gpd-pagos-cotizador.jpg",
+        ui2: "/projects/gpd-pagos/gpd-pagos-proyecciones.jpg",
+        ui3: "/projects/gpd-pagos/gpd-pagos-movil.png",
+        ui4: "/projects/gpd-pagos/gpd-pagos-colaboradores.jpg",
+        ui3Vertical: "/projects/gpd-pagos/gpd-pagos-movil.png"
+      }
+    },
     {
       id: "restaurante",
       title: "Restaurant-Management-System",
