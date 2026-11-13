@@ -3,7 +3,7 @@ import Section from '../common/Section';
 import { SectionHeader, Paragraph } from '../common/Typography';
 import { Button } from '../common/Button';
 import { portfolioData } from '../../data/portfolioData';
-import { Sparkles, BookOpen, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Sparkles, BookOpen, ExternalLink, ChevronLeft, ChevronRight, Lock } from 'lucide-react';
 import { GithubIcon } from '../common/CustomIcons';
 
 const Projects = () => {
@@ -17,13 +17,16 @@ const Projects = () => {
   // Obtener todas las imágenes válidas para el proyecto actual
   const slides = [];
   if (activeProject.images?.ui1) {
-    slides.push({ id: 'ui1', type: 'web', url: activeProject.images.ui1, label: 'Vista Principal' });
+    slides.push({ id: 'ui1', type: 'web', url: activeProject.images.ui1, label: 'Web 1' });
   }
   if (activeProject.images?.ui2) {
-    slides.push({ id: 'ui2', type: 'web', url: activeProject.images.ui2, label: 'Vista Secundaria' });
+    slides.push({ id: 'ui2', type: 'web', url: activeProject.images.ui2, label: 'Web 2' });
+  }
+  if (activeProject.images?.ui4) {
+    slides.push({ id: 'ui4', type: 'web', url: activeProject.images.ui4, label: 'Web 3' });
   }
   if (activeProject.images?.ui3) {
-    slides.push({ id: 'ui3', type: 'mobile', url: activeProject.images.ui3, label: 'Vista Móvil' });
+    slides.push({ id: 'ui3', type: 'mobile', url: activeProject.images.ui3, label: 'Móvil' });
   }
 
   const openPreview = (imageUrl) => setPreviewImage(imageUrl);
@@ -102,7 +105,7 @@ const Projects = () => {
                       onClick={() => setCurrentSlideIdx(sIdx)}
                       className={`font-mono text-[10px] uppercase tracking-wider px-3 py-1 rounded cursor-pointer flex items-center gap-1.5 transition-all duration-300 ${currentSlideIdx === sIdx ? 'bg-cyber-violet/20 text-slate-100 border border-cyber-violet/30' : 'text-slate-400 hover:text-slate-200 border border-transparent'}`}
                     >
-                      {slide.id === 'ui1' ? 'Web 1' : slide.id === 'ui2' ? 'Web 2' : 'Móvil'}
+                      {slide.label}
                     </button>
                   ))}
                 </div>
@@ -148,7 +151,7 @@ const Projects = () => {
                                   <img
                                     src={slide.url}
                                     alt={`${slide.label} de ${activeProject.title}`}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-102"
+                                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-102"
                                   />
                                 </div>
                               </button>
@@ -166,7 +169,7 @@ const Projects = () => {
                                       <img
                                         src={slide.url}
                                         alt={`${slide.label} de ${activeProject.title}`}
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-102"
+                                        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-102"
                                       />
                                     </div>
                                   </div>
@@ -253,13 +256,20 @@ const Projects = () => {
 
                 {/* Enlaces de Acción */}
                 <div className="flex items-center gap-3">
-                  <Button
-                    variant="secondary"
-                    href={activeProject.repoUrl}
-                    className="flex items-center gap-1.5 !px-4 !py-2.5"
-                  >
-                    <GithubIcon size={14} /> Repository
-                  </Button>
+                  {activeProject.repoUrl ? (
+                    <Button
+                      variant="secondary"
+                      href={activeProject.repoUrl}
+                      className="flex items-center gap-1.5 !px-4 !py-2.5"
+                    >
+                      <GithubIcon size={14} /> Repository
+                    </Button>
+                  ) : (
+                    <div className="inline-flex items-center gap-1.5 font-mono text-[11px] text-slate-400 bg-slate-900/90 border border-slate-800 rounded-md px-3 py-2 select-none">
+                      <Lock size={13} className="text-amber-400/80" />
+                      <span>Código Privado (Empresarial)</span>
+                    </div>
+                  )}
                 </div>
                 {/* Enlaces de Proyecto solo si estan desplegados */}
                 {activeProject.displayed && (
@@ -284,15 +294,15 @@ const Projects = () => {
 
       {previewImage && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 p-4" onClick={closePreview} role="presentation">
-          <div className="relative max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
+          <div className="relative max-w-5xl max-h-[90vh] w-full flex items-center justify-center overflow-auto" onClick={(e) => e.stopPropagation()}>
             <img
               src={previewImage}
               alt={`Vista amplia de ${activeProject.title}`}
-              className="w-full h-auto rounded-2xl shadow-2xl object-contain"
+              className="max-w-full max-h-[85vh] rounded-2xl shadow-2xl object-contain"
             />
             <button
               type="button"
-              className="absolute top-3 right-3 rounded-full bg-slate-900/90 px-3 py-2 text-xs font-medium text-slate-100 hover:bg-slate-800"
+              className="absolute top-3 right-3 rounded-full bg-slate-900/90 px-3 py-2 text-xs font-medium text-slate-100 hover:bg-slate-800 cursor-pointer"
               onClick={closePreview}
             >
               Cerrar
