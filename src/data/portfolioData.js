@@ -126,8 +126,8 @@ export const portfolioData = {
       description: "Un sistema de gestión para restaurantes con funcionalidades de reserva, gestión de menú y control de inventario.",
       skillsLearned: ["Desarrollo de aplicaciones web con React", "Integración de APIs RESTful", "React-Native", "Diseño responsivo con Tailwind CSS"],
       repoUrl: "https://github.com/ecujcuj-2024028/Restaurant-Management-System.git",
-      demoUrl: "https://restaurant-management-system-fronte-psi.vercel.app/login",
-      displayed: true,
+      demoUrl: "",
+      displayed: false,
       images: {
         ui1: "https://res.cloudinary.com/dscti2jte/image/upload/v1782596181/Captura_de_pantalla_2026-06-27_153314_m6lo1w.png",
         ui2: "https://res.cloudinary.com/dscti2jte/image/upload/v1782596181/Captura_de_pantalla_2026-06-27_153327_ssaain.png",
@@ -137,11 +137,11 @@ export const portfolioData = {
     },{
       id: "notas",
       title: "Notas",
-      description: "Una aplicación para gestionar notas con funcionalidades de Crear, Editar, Buscar y Eliminar, desplegado con Render para Backend y Netlify para Frontend.",
-      skillsLearned: ["React", "JavaScript", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Despliegue en Render y Netlify"],
+      description: "Una aplicación para gestionar notas con funcionalidades de Crear, Editar, Buscar y Eliminar (CRUD completo), búsqueda en tiempo real y filtrado dinámico.",
+      skillsLearned: ["React", "JavaScript", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
       repoUrl: "https://github.com/ecujcuj-2024028/NotasApp.git",
-      demoUrl: "https://appnotasfrontend.netlify.app",
-      displayed: true,
+      demoUrl: "",
+      displayed: false,
       images: {
         ui1: "https://res.cloudinary.com/dscti2jte/image/upload/v1783232484/Captura_de_pantalla_2026-07-01_224920_ploryq.png",
         ui2: "https://res.cloudinary.com/dscti2jte/image/upload/v1783232484/Captura_de_pantalla_2026-07-01_224902_jwlvls.png",
@@ -154,7 +154,7 @@ export const portfolioData = {
       description: "Un sistema de gestión para tiendas con funcionalidades de inventario, ventas y gestión de clientes.",
       skillsLearned: ["Desarrollo con C#", "Integración de APIs RESTful", "ASP.NET Core", "Diseño con bootstrap"],
       repoUrl: "https://github.com/ecujcuj-2024028/Tienda.git",
-      demoUrl: "https://tienda-online-demo.netlify.app",
+      demoUrl: "",
       displayed: false,
       images: {
         ui1: "https://res.cloudinary.com/dscti2jte/image/upload/v1782603505/Captura_de_pantalla_2026-06-27_173557_jkx96f.png",
@@ -168,7 +168,7 @@ export const portfolioData = {
       description: "Este proyecto es un orquestador e interfaz interactiva para un DJ de radio impulsado por Inteligencia Artificial (Gemini a través de OpenRouter) y síntesis de voz (ElevenLabs). Te permite reproducir música de YouTube Music, interactuar con un DJ por texto o voz, gestionar listas de reproducción, cola de reproducción, historial y me gustas/no me gustas en tiempo real.",
       skillsLearned: ["React", "Inteligencia Artificial", "Síntesis de Voz", "Integración de APIs RESTful", "Node.Js"],
       repoUrl: "https://github.com/ecujcuj-2024028/IADJ.git",
-      demoUrl: "https://IADJ-demo.netlify.app",
+      demoUrl: "",
       displayed: false,
       images: {
         ui1: "https://res.cloudinary.com/dscti2jte/image/upload/v1782604690/Captura_de_pantalla_2026-06-27_175741_fmr23k.png",
@@ -182,7 +182,7 @@ export const portfolioData = {
       description: "Sistema web para reportes ciudadanos y gestión operativa municipal. Permite geolocalizar incidencias, adjuntar evidencias y gestionar estados. Desarrollado con React, TypeScript, Node.js, Express y PostgreSQL + PostGIS para datos geoespaciales. Integra Docker, JWT para autenticación por roles, Cloudinary para imágenes y la API de Gemini (IA) para análisis asistido.",
       skillsLearned: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL + PostGIS", "Docker", "JWT", "Cloudinary", "Gemini API (IA)"],
       repoUrl: "https://github.com/smolina-2021528/GestionUrbana.git",
-      demoUrl: "https://ciudad-activa-proyect.netlify.app/login",
+      demoUrl: "",
       displayed: false,
       images: {
         ui1: "https://res.cloudinary.com/dscti2jte/image/upload/v1786982869/Captura_de_pantalla_2026-08-17_100744_d0aynt.png",

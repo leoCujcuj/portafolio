@@ -144,7 +144,7 @@ const Projects = () => {
                               >
                                 <div className="mockup-browser-toolbar">
                                   <div className="input border border-slate-800/80 bg-slate-900 text-slate-400 font-mono text-[10px] select-none">
-                                    {activeProject.demoUrl || "vista.local"}
+                                    {activeProject.demoUrl || `${activeProject.id}.local`}
                                   </div>
                                 </div>
                                 <div className="aspect-video relative overflow-hidden bg-slate-950 border-t border-slate-800">
@@ -271,8 +271,8 @@ const Projects = () => {
                     </div>
                   )}
                 </div>
-                {/* Enlaces de Proyecto solo si estan desplegados */}
-                {activeProject.displayed && (
+                {/* Enlaces de Proyecto solo si estan desplegados y tienen URL valida */}
+                {activeProject.displayed && activeProject.demoUrl && (
                   <div className="flex items-center gap-3">
                     <Button
                       variant="secondary"
